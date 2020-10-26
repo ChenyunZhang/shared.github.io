@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Nav from "./NavBarNotHome";
 import FollowedSingleUser from "./FollowedSingleUser";
 // import FollowedUserDetail from "./FollowedUserDetail"

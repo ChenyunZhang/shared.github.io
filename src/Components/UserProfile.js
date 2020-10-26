@@ -9,7 +9,7 @@ function UserProfile(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`https://share-backend-app.herokuapp.com/${props.id}`, {
+    fetch(`https://shared-backend.herokuapp.com/users/${props.id}`, {
       method: "PATCH",
       headers: {
         "content-type": "Application/json",

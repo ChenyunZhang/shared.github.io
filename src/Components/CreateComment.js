@@ -8,7 +8,7 @@ function CreateComment(props) {
     const handleCommentSubmit = (e) => {
       e.preventDefault();
   
-      fetch(`https://share-backend-app.herokuapp.com/comments`, {
+      fetch(`https://shared-backend.herokuapp.com/comments`, {
         method: "POST",
         headers: {
           "content-type": "Application/json",

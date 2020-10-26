@@ -7,7 +7,7 @@ function NavbarHome() {
         <nav className="navbar navbar-custom navbar-fixed-top">
             <div className="container-fluid">
             <div className="navbar-header">
-                <Link to="/" className="navbar-brand home-page-link">Share</Link>
+                <Link to="/" className="navbar-brand home-page-link">Shared</Link>
                 </div>
                 {/* <ul className="nav navbar-nav">
                     <li><Link className="home-page-link">Home</Link></li>

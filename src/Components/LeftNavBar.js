@@ -32,7 +32,7 @@ function LeftNavBar(props) {
                 src={
                   props.userInfo.avatar
                     ? props.userInfo.avatar
-                    : "https://images.unsplash.com/photo-1505628346881-b72b27e84530?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    : "https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
                 }
               ></img>
               <div className="content">

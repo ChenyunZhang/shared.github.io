@@ -11,7 +11,7 @@ import UnFollowed from "./Unfollowed";
 function SharedPosts(props) {
   const handleLike = () => {
     if (props.like.every((l) => l.user_id !== props.currentUser.id)) {
-      fetch("http://localhost:3000/likes", {
+      fetch("https://shared-backend.herokuapp.com/likes", {
         method: "POST",
         headers: {
           "Content-Type": "Application/json",
@@ -29,7 +29,7 @@ function SharedPosts(props) {
       const likeObj = props.like.filter(
         (l) => l.user_id === props.currentUser.id
       )[0].id;
-      fetch(`http://localhost:3000/likes/${likeObj}`, {
+      fetch(`https://shared-backend.herokuapp.com/likes/${likeObj}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -47,7 +47,7 @@ function SharedPosts(props) {
     : null;
 
   const handlePostClick = () => {
-    fetch(`https://share-backend-app.herokuapp.com/posts/${props.postObj.id}`, {
+    fetch(`https://shared-backend.herokuapp.com/posts/${props.postObj.id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

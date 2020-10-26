@@ -5,7 +5,7 @@ function FollowedPagebutton(props) {
 
   const handleFollow = () => {
     const relationshipObj = props.relationship.filter(relationshipObj => relationshipObj.followed_id === props.user.id)[0]
-    fetch(`https://share-backend-app.herokuapp.com/relationships/${relationshipObj.id}`, {
+    fetch(`https://shared-backend.herokuapp.com/relationships/${relationshipObj.id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -15,11 +15,13 @@ function FollowedPagebutton(props) {
       });
   };
 
+  const buttonClass = "ui blue basic label"
+
   return (
     <>
       <div className="right floated meta">
-        <div className="ui blue basic label" onClick={handleFollow}>
-          {follow ? "unfollow" : "follow"}
+        <div className={follow ? buttonClass : null } onClick={handleFollow}>
+          {follow ? "unfollow" : ""}
         </div>
       </div>
     </>

@@ -5,7 +5,7 @@ function Unfollowed(props) {
     const [follow, setFollow] = useState(true)
 
     const handleFollow=(e) =>{
-    fetch("https://share-backend-app.herokuapp.com/relationships", {
+    fetch("https://shared-backend.herokuapp.com/relationships", {
         method: "POST",
         headers: {
           "Content-Type": "Application/json",

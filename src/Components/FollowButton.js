@@ -5,7 +5,7 @@ function FollowButton(props) {
 
   const handleFollow = () => {
     const relationshipObj = props.currentUser.relationship.filter(relationshipObj => relationshipObj.followed_id === props.postObj.user_id)[0]
-    fetch(`https://share-backend-app.herokuapp.com/relationships/${relationshipObj.id}`, {
+    fetch(`https://shared-backend.herokuapp.com/relationships/${relationshipObj.id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

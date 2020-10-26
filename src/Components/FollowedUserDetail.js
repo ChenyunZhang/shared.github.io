@@ -5,7 +5,7 @@ function FollowedUserDetail(props) {
   const [likedArr, setLikedArr] = useState([]);
   const [currentUser, setCurrentUser] = useState("");
 
-  fetch("https://share-backend-app.herokuapp.com//users")
+  fetch("https://shared-backend.herokuapp.com/users")
     .then((r) => r.json())
     .then((allUsers) => {
       const current = allUsers.filter(

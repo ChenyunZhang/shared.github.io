@@ -11,9 +11,9 @@ function HomeShow(props) {
   const [comments, setComment] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const url1 = "https://share-backend-app.herokuapp.com/posts";
-  const url2 = "https://share-backend-app.herokuapp.com/likes";
-  const url3 = "https://share-backend-app.herokuapp.com/comments";
+  const url1 = "https://shared-backend.herokuapp.com/posts";
+  const url2 = "https://shared-backend.herokuapp.com/likes";
+  const url3 = "https://shared-backend.herokuapp.com/comments";
 
   const promises = Promise.all([fetch(url1), fetch(url2), fetch(url3)]);
 

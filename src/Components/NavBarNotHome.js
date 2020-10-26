@@ -8,7 +8,7 @@ function NavBarLogIn(props) {
            <nav className="navbar navbar-fixed-top navbar-custom">
             <div className="container-fluid nav-custom-container">
                 <ul className="nav navbar-nav">
-                    <li><Link to="/" className="navbar-brand home-page-link">Share</Link></li>
+                    <li><Link to="/" className="navbar-brand home-page-link">Shared</Link></li>
                     <li><Link to="/home" className="home-page-link">Home</Link></li>
                     <li className="nav-item btn-group">
 						<Link className="dropdown-toggle home-page-link" data-toggle="dropdown" id="dropdownMenu1" data-toggle="dropdown" to="/home">Account</Link>

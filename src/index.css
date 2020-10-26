@@ -8,13 +8,13 @@
 
 #Global {
   /* infinity */
-  /* animation: arm 23s linear infinite;
+  animation: arm 15s linear infinite;
   transform-origin: center;
-  transform-box: fill-box; */
+  transform-box: fill-box;
 }
 
 #Global:hover {
-  animation: arm 0.1s linear infinite;
+  animation: arm 1s linear infinite;
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -228,7 +228,7 @@ li .navBar-login-Text {
 }
 
 .navbar-custom {
-  background-color: #190433b6;
+  background-color: #3a0368b6;
 }
 
 .home-page-link {
@@ -306,7 +306,7 @@ label {
   max-height: 250px;
 }
 
-.followed-user-profile-image{
+.followed-user-profile-image {
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -324,7 +324,6 @@ label {
   text-transform: uppercase;
 }
 
-.followed-user-profile{
+.followed-user-profile {
   border: none;
 }
-

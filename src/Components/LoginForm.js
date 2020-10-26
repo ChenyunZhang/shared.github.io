@@ -50,7 +50,7 @@ class LoginForm extends React.Component {
           <div className="form-container sign-up-container">
             <form onSubmit={this.handleSignin}>
               <h1 className="sign-in-font">Create Account</h1>
-              <div className="login-error">{this.props.error === "This email address is alredy being registered" ? this.props.error : null}</div>
+              <div className="login-error">{this.props.error === "This email address is alredy being registered/Password needs to be at least 6 characters long" ? this.props.error : null}</div>
                 <input
                   type="text"
                   placeholder="Name"

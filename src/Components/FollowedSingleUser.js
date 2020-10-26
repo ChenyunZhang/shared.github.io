@@ -21,6 +21,7 @@ function FollowedSingleUser(props) {
           <img
           // onClick={handleClick}
             className="ui avatar image"
+            alt={props.user.username}
             src={
               props.user.avatar
                 ? props.user.avatar

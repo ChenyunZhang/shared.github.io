@@ -10,7 +10,7 @@ function StatusPostForm(props) {
   let handlePostForm = (e) => {
     e.preventDefault();
     if (!featured_image) {
-      fetch("https://share-backend-app.herokuapp.com/posts", {
+      fetch("https://shared-backend.herokuapp.com/posts", {
         method: "POST",
         headers: {
           "Content-Type": "Application/json",
@@ -31,7 +31,7 @@ function StatusPostForm(props) {
       formData.append("user_id", id);
       formData.append("featured_image", featured_image);
 
-      fetch("https://share-backend-app.herokuapp.com/posts", {
+      fetch("https://shared-backend.herokuapp.com/posts", {
         method: "POST",
         body: formData,
       })
