@@ -1,0 +1,330 @@
+* {
+  box-sizing: border-box;
+}
+
+.home-image {
+  text-align: center;
+}
+
+#Global {
+  /* infinity */
+  /* animation: arm 23s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box; */
+}
+
+#Global:hover {
+  animation: arm 0.1s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#login:hover {
+  color: greenyellow;
+}
+
+@keyframes arm {
+  from {
+    transform: rotateZ(-360deg);
+  }
+  to {
+    transform: rotateZ(0);
+  }
+}
+
+/* ############################################################################ */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+.body {
+  font-family: "Montserrat", "sans-serif";
+  background: #f6f5f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* margin: 30px 0 50px; */
+}
+
+.sign-in-font {
+  font-weight: bold;
+  margin: 0;
+}
+
+.login-p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+
+#login-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 85vw;
+  max-width: 100%;
+  min-height: 85vh;
+}
+
+.form-container form {
+  /* background: #fff; */
+  background: rgb(202, 192, 190);
+  display: flex;
+  padding: 0 50px;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.form-container input {
+  background: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.loginform-button {
+  border-radius: 20px;
+  border: 1px solid #310485;
+  background-color: #310485;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+.loginform-button:active {
+  transform: scale(0.95);
+}
+
+.loginform-button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background: transparent;
+  border-color: #fff;
+}
+
+.form-container {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  z-index: 1;
+  opacity: 0;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.8s ease-in-out;
+  z-index: 100;
+}
+
+.overlay {
+  background: rgba(14, 28, 110, 0.801);
+  background: linear-gradient(to right #ff4b2b, #ff416c), no-repeat 0 0 / cover;
+  color: #fff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.8s ease-in-out;
+}
+
+.overlay-panel {
+  top: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  transform: translateX(0);
+  transition: transform 0.8s ease-in-out;
+}
+
+.overlay-right {
+  right: 0;
+  transform: translate(0);
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.login-container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+
+.login-container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.login-container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+.login-container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.login-container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.login-container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+.navbar.custom-color {
+  /* background: rgba(102, 2, 196, 0.658); */
+}
+
+li .navBar-login-Text {
+  font-size: 15px;
+}
+
+.login-error {
+  color: #d8000c;
+  /* background: #ffd2d2; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* margin:10px 22px; */
+  /* font-size: 1em; */
+  margin: 1vh;
+  vertical-align: middle;
+}
+
+.navbar-custom {
+  background-color: #190433b6;
+}
+
+.home-page-link {
+  color: white;
+  font-size: 1.3em;
+}
+
+.ui.fluid.centered.card {
+  /* max-height: 40vh;
+  overflow: scroll; */
+}
+
+#upload-photo {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+label {
+  cursor: pointer;
+}
+
+.four.wide.column {
+  position: fixed;
+}
+
+.five.wide.column {
+  position: fixed;
+}
+
+.seven.wide.column {
+  height: 85vh;
+  overflow-y: scroll;
+}
+
+.seven.wide.column::-webkit-scrollbar {
+  display: none;
+}
+
+.trash.alternate.icon {
+  cursor: pointer;
+}
+
+.profile-image {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.card-image {
+  border-radius: 3%;
+}
+
+.upload-button:hover {
+  color: rgba(26, 100, 143, 0.973);
+}
+
+.ui.centered.card.post {
+  width: 40vw;
+  padding: 0 1vw 0 1vw;
+  /* height: 50vh; */
+}
+
+.ui.centered.card.post:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.news-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.ui.image.left-bar {
+  max-height: 250px;
+}
+
+.followed-user-profile-image{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.new-image {
+  max-height: 150px;
+}
+
+.ui.blue.basic.label {
+  cursor: pointer;
+}
+
+.news-description {
+  text-transform: uppercase;
+}
+
+.followed-user-profile{
+  border: none;
+}
+
