@@ -9,7 +9,7 @@ function TodayInHistory() {
   const [quote, setQuote] = useState("");
 
   useEffect(() => {
-    fetch(`https://numbersapi.com/${m}/${d}/date`)
+    fetch(`http://numbersapi.com/${m}/${d}/date`)
       .then((r) => r.text())
       .then((quoteOftheday) => {
         setQuote(quoteOftheday);
