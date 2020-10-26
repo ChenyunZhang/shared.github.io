@@ -28,7 +28,7 @@ class App extends React.Component {
 
   componentDidMount() {
     if (localStorage.token) {
-      fetch("http://localhost:3000/users/keep_logged_in", {
+      fetch("https://shared-backend.herokuapp.com/users/keep_logged_in", {
         method: "GET",
         headers: {
           Authorization: localStorage.token,
@@ -41,7 +41,7 @@ class App extends React.Component {
 
   handleLoginSubmit = (userInfo) => {
     if (!userInfo.username) {
-      fetch("http://localhost:3000/users", {
+      fetch("https://shared-backend.herokuapp.com/users", {
         method: "POST",
         headers: {
           "Content-Type": "Application/json",
@@ -54,7 +54,7 @@ class App extends React.Component {
         .then((res) => res.json())
         .then(this.helpHandleResponse);
     } else {
-      fetch("http://localhost:3000/users", {
+      fetch("https://shared-backend.herokuapp.com/users", {
         method: "POST",
         headers: {
           "Content-Type": "Application/json",
@@ -115,7 +115,7 @@ class App extends React.Component {
   // ###################################################################################
   addFollower = (newRelationship) => {
     // console.log(newRelationship.followed_id)
-    fetch("http://localhost:3000/users")
+    fetch("https://shared-backend.herokuapp.com/users")
       .then((r) => r.json())
       .then((userArr) => {
         const new_being_followed_user = userArr.filter(
